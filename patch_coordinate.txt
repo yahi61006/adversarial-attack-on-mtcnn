@@ -1,0 +1,29 @@
+chin
+
+mask_x1 = x1
+mask_x2 = x2 
+mask_y1 = left_mouth_y + int(height / 10)
+mask_y2 = y2 + height
+
+forehead
+
+mask_x1 = x1
+mask_x2 = x2 
+mask_y1 = y1 - int(height / 5)
+mask_y2 = y1 + int(height / 15)
+        
+frame
+
+mask_x1 = x1 - int(width / 5)
+mask_x2 = x2 + int(width / 5)
+mask_y1 = y1 - int(height / 5)
+mask_y2 = y2 + int(height / 5)
+    
+mask[y1:y2, x1:x2] = 0
+
+mouth
+
+mask_x1 = x1 + int(width/20)
+mask_x2 = x2 - int(width/20)
+mask_y1 = nose_y
+mask_y2 = y2
